@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark theme overrides */
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+  
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+    background-color: #111827; /* bg-gray-900 */
+    color: #f3f4f6; /* text-gray-100 */
+  }
+}
+
+/* Custom dark theme styles */
+@layer components {
+  /* Ensure consistent dark backgrounds for event items */
+  .event-item-dark {
+    @apply bg-gray-800 border-gray-700;
+  }
+  
+  /* Dark theme for form elements */
+  input[type="checkbox"] {
+    @apply bg-gray-800 border-gray-600;
+  }
+  
+  /* Dark theme for buttons */
+  .btn-dark {
+    @apply bg-gray-700 border-gray-600 text-gray-200 hover:bg-gray-600;
+  }
+  
+  /* Dark theme for cards */
+  .card-dark {
+    @apply bg-gray-800 border-gray-700 shadow-lg;
+  }
+}
+
+/* extras */
+body { padding-bottom: env(safe-area-inset-bottom); }
